@@ -1,0 +1,7 @@
+As we kenow : 
+response = requests.get(url)
+    test = json.loads(response.text)
+    list = test['data'].get('items')
+    for i in range(len(list)-1):
+        if list[i].get('name') == nameip:
+            return list[i].get('ip')
